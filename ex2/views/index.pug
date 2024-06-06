@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-black
+      h2.w3-center Livros
+    .w3-container
+      .table-wrapper
+        style.
+          .table-wrapper {
+            overflow-x: auto; 
+          }
+          table.w3-table-all {
+            width: 100%; 
+          }
+          th, td {
+            min-width: 100px;
+          }
+        table.w3-table-all
+          thead
+            tr
+              th(id="idlivro") ID do Livro
+              th(id="titulo") Título
+              th(id="autores") Autores
+              th(id="datadepub") Data de Publicação
+              th(id="paginas") Páginas
+
+          tbody
+            each livro in livros
+              tr
+                td
+                  a(href='/' + livro._id)= livro._id
+                td= livro.title
+                td= livro.author
+                td= livro.publishDate
+                td= livro.pages

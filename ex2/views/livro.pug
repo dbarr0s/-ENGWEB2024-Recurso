@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  a(href='/') Voltar
+  .w3-card-4
+    header.w3-black
+      h2.w3-center Livro
+    .w3-container
+      if livro._id
+        p id: #{livro._id}
+      if livro.title
+        p title: #{livro.title}
+      if livro.series
+        p series: #{livro.series}
+      if livro.author
+        p author: #{livro.author}
+      if livro.rating
+        p rating: #{livro.rating}
+      if livro.description
+        p description: #{livro.description}
+      if livro.language
+        p language: #{livro.language}
+      if livro.isbn
+        p isbn: #{livro.isbn}
+      if livro.genres
+        p genres: #{livro.genres.join(', ')}
+      if livro.characters
+        p characters: #{livro.characters.join(', ')}
+      if livro.bookFormat
+        p bookFormat: #{livro.bookFormat}
+      if livro.edition
+        p edition: #{livro.edition}
+      if livro.pages
+        p pages: #{livro.pages}
+      if livro.publisher
+        p publisher: #{livro.publisher}
+      if livro.publishDate
+        p publishDate: #{livro.publishDate}
+      if livro.firstPublishDate
+        p firstPublishDate: #{livro.firstPublishDate}
+      if livro.awards
+        p awards: #{livro.awards.join(', ')}
+      if livro.numRatings
+        p numRatings: #{livro.numRatings}
+      if livro.ratingsByStars
+        p ratingsByStars: #{livro.ratingsByStars.join(', ')}
+      if livro.likedPercent
+        p likedPercent: #{livro.likedPercent}
+      if livro.setting
+        p setting: #{livro.setting.join(', ')}
+      if livro.coverImg
+        p coverImg: #{livro.coverImg}
+      if livro.bbeScore
+        p bbeScore: #{livro.bbeScore}
+      if livro.bbeVotes
+        p bbeVotes: #{livro.bbeVotes}
+      if livro.price
+        p price: #{livro.price}

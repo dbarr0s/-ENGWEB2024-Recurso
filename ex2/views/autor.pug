@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  a(href='/') Voltar
+  .w3-card-4
+    header.w3-black
+      h2.w3-center #{autor.nome}
+  p Total de livros: #{totalLivros}
+  .w3-container
+    table.w3-table-all
+      thead
+        th ID do Livro
+        th Título
+        th Data de Publicação
+        th Número de Páginas
+      tbody
+        each livro in livros
+          tr
+            td
+              a(href='/livro/' + livro._id)= livro._id
+            td= livro.titulo
+            td= livro.dataPublicacao
+            td= livro.paginas
